@@ -3,7 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
-<<<<<<< HEAD
+
 
 export default function Post({ postData }) {
   return (
@@ -22,7 +22,6 @@ export default function Post({ postData }) {
   )
 }
 
-=======
 export default function Post({ postData }) {
     return (
       <Layout>
@@ -40,7 +39,6 @@ export default function Post({ postData }) {
     )
   }
  
->>>>>>> ab45a41 (HeadingFixed)
 export async function getStaticPaths() {
   const paths = getAllPostIds()
   return {
@@ -56,8 +54,5 @@ export async function getStaticProps({ params }) {
       postData
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ab45a41 (HeadingFixed)
+

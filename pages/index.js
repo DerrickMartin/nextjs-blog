@@ -5,8 +5,6 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 
-<<<<<<< HEAD
-=======
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -27,51 +25,46 @@ export async function getServerSideProps(context) {
 }
 
 */
-
->>>>>>> ab45a41 (HeadingFixed)
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <><Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-<<<<<<< HEAD
         <p>[Your Self Introduction]</p>
         <p>
           (This is a sample website - you’ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
-=======
-        <p>Hello my name is Derrick Martin, I am a software engineer developing in the cloud.
-          <br/> I have experience using AWS cloud enviroment and knowledge of other 
-          cloud service providers.
-          <br/> 
-          <br/> 
-          My interest include Machine Learning, NLP, and developing VR/AR enviroments.
-        </p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-
->>>>>>> ab45a41 (HeadingFixed)
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
+      <p>Hello my name is Derrick Martin, I am a software engineer developing in the cloud.
+        <br /> I have experience using AWS cloud enviroment and knowledge of other
+        cloud service providers.
+        <br />
+        <br />
+        My interest include Machine Learning, NLP, and developing VR/AR enviroments.
+      </p>
+      <p>
+        (This is a sample website - you’ll be building a site like this on{' '}
+        <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+      </p>
+    </section>
+    <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-<<<<<<< HEAD
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
-=======
               <Link href={'/posts/${id}'}>
                 <a>{title}</a>
-                </Link>
->>>>>>> ab45a41 (HeadingFixed)
+              </Link>
+              <Link href={'/posts/${id}'}>
+                <a>{title}</a>
+              </Link>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
@@ -80,10 +73,10 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-    </Layout>
+    </Layout></>
   )
 }
-<<<<<<< HEAD
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -93,7 +86,7 @@ export async function getStaticProps() {
     }
   }
 }
-=======
+ ab45a41 (HeadingFixed)
   /*  <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -253,5 +246,6 @@ export async function getStaticProps() {
     </div>
   )
 }
+<<<<<<< HEAD
 */
->>>>>>> ab45a41 (HeadingFixed)
+
